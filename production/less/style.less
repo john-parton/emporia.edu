@@ -1,0 +1,1007 @@
+@import "bootstrap.less";
+
+
+/* ===== Primary Styles ========================================================
+   Author: Umair Abbasi
+   ========================================================================== */
+body {
+	margin: 0 auto;
+	font-size: 14px;
+	/* Fall back background-image */
+	background-image: url("/global/images/150/gradient.png") repeat scroll 0% 0% #e6e3e1 ;
+	background: #e6e3e1; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNmUzZTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(left,  #ffffff 0%, #e6e3e1 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(100%,#e6e3e1)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ffffff 0%,#e6e3e1 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #ffffff 0%,#e6e3e1 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #ffffff 0%,#e6e3e1 100%); /* IE10+ */
+	background: linear-gradient(left,  #ffffff 0%,#e6e3e1 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e3e1',GradientType=1 ); /* IE6-8 */
+}
+
+#search [type="text"] {
+  box-shadow: none;
+}
+.vertical-divider {
+  border-right: 2px solid @gold;
+  padding-top: 11px;
+  margin: 4px 6px 0 6px;
+}
+a {
+  color: @black;
+}
+a:focus {
+  outline: none;
+}
+a:hover {
+  color: @linkColor;
+  background: none;
+  text-decoration: none;
+}
+#lightbox a {
+	color: @linkColor;
+}
+#lightbox a:hover {
+	color: @linkColorHover;
+}
+header #skip a,
+header #skip a:hover,
+header #skip a:visited {
+  position: absolute;
+  left: 0px;
+  top: -500px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+header #skip a:active,
+header #skip a:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "minion-pro", serif;
+}
+#standardContentContainer a {
+  color: @linkColor;
+}
+#standardContentContainer a:hover {
+  color: @linkColorHover;
+  text-decoration: underline;
+}
+blockquote p {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+/*Box shadow for body container*/
+.container {
+	background-color: #fff;
+}
+
+/***************
+	HEADER
+	************/
+header {
+  min-height: 14em;
+}
+header[role="banner"] {
+  background: url('/global/images/150/150header.jpg') no-repeat;
+  position: relative;
+  z-index: 99;
+}
+
+/***** Logo *****/
+#headerLogo {
+  float: left;
+  position: absolute;
+  left: 38px;
+}
+#headerLogo .typeLogo {
+	position: relative;
+	bottom: 18px;
+	left: 16px;
+}
+
+/**** Header Links ****/
+#headerLinks {
+	position: relative;
+}
+#headerLinks > ul {
+  padding: 5px 8px 0 0;
+}
+#headerLinks > ul > li {
+  float: left;
+}
+#headerLinks > ul > li > a {
+  font-size: 0.92857142857143em; /* 13px / 14px */
+  color: @grayLighter;
+  text-transform: none;
+}
+#headerLinks > ul > li > a:hover {
+	color: @linkColor;
+}
+#headerLinks ul.nav .dropdown li a {
+	font-size: 13px;
+}
+
+/* For libguides.emporia.edu header */
+#custom_header header[role="banner"] {
+	background-size: 985px auto;
+}
+
+/**** Search *****/
+header[role="banner"] #search {
+  width: 300px;
+  float: right;
+  padding: 0 8px 0 0;
+  position: relative;
+  top: 4px;
+  clear: right;
+}
+#search div#cse-search-form div.gsc-control-searchbox-only form.gsc-search-box table.gsc-search-box tbody tr td.gsc-search-button input.gsc-search-button {
+  padding: 6px 17px;
+}
+
+/**** Navigation *****/
+header[role="banner"] > nav[role="navigation"] {
+  position: relative;
+	top: 63px;
+}
+header[role="banner"] > nav[role="navigation"] ul {
+  padding: 0 8px 0 0;
+  margin: 0;
+  height: 5px;
+}
+header[role="banner"] > nav[role="navigation"] li {
+  float: left;
+}
+header[role="banner"] > nav[role="navigation"] li a {
+  font-size: 0.92857142857143em; /* 13px / 14px */
+  text-transform: uppercase;
+}
+.nav > li > a:hover {
+  background-color: transparent;
+}
+
+/***************
+	MAIN CONTENT
+	************/
+div[role="main"] {
+  background-color: @white;
+  position: relative;
+  bottom: 24px;
+  z-index: 1;
+}
+
+/***** Page Title *****/
+div[role="main"] div#pageTitle {
+  background-color: @black;
+  padding: 0px 12px 18px 22px;
+  border-bottom: 4px solid @gold;
+}
+div[role="main"] div#pageTitle h1 {
+  font-family: "minion-pro", serif;
+  font-weight: normal;
+  position: relative;
+  top: 12px;
+}
+div[role="main"] div#pageTitle h1 a {
+  color: @white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/***** Bread Crumbs *****/
+div[role="main"] #pageTitleContainer .breadCrumbs {
+  min-height: 20px;
+  background-color: #bcb5ad;
+  padding: 1px;
+}
+div[role="main"] #pageTitleContainer .breadCrumbs li {
+  float: left;
+  list-style: none;
+}
+div[role="main"] #pageTitleContainer .breadCrumbs li img {
+  max-width: none;
+  padding: 0 0 3px 0;
+}
+div[role="main"] #pageTitleContainer .breadCrumbs li,
+.breadCrumbs li a {
+  text-transform: uppercase;
+  font-size: 12px;
+  text-decoration: none;
+  float: left;
+}
+div[role="main"] #pageTitleContainer .breadCrumbs li a:hover {
+  color: @linkColor;
+}
+
+/***** Left Navigation *****/
+nav[role="navigation"] {
+  margin-left: 0px;
+}
+nav[role="navigation"] #leftNavContainer {
+  padding: 12px 0 0 0;
+}
+nav[role="navigation"] #leftNav {
+  background-color: #f8f7f5;
+}
+nav[role="navigation"] #leftNav ul {
+  color: #bcb5ad;
+}
+nav[role="navigation"] #leftNav li {
+  padding: 6px 0 12px 0;
+  list-style: square;
+}
+nav[role="navigation"] #leftNav li a {
+  text-transform: uppercase;
+  /*border-left: 2px solid @gold;*/
+  padding-top: 0 !important;
+  padding-left: 4px;
+  text-decoration: none;
+  font-size: 13px;
+}
+nav[role="navigation"] #leftNav li.active, nav[role="navigation"] #leftNav li.active > a {
+	color: @linkColor;
+}
+nav[role="navigation"] #leftNavCustom {
+	margin: 8px 0 8px 0;
+}
+
+/***** Main Content *****/
+#standardContentContainer {
+  padding: 11px;
+}
+
+/***************
+	FOOTER
+	************/
+footer {
+  background-color: #b9b1a9;
+  padding: 12px 0 12px 0;
+}
+footer ul.socialMedia {
+	list-style: none;
+}
+footer .tagLine {
+  padding: 6px 8px 0 0;
+}
+footer .footerLinks {
+  background-color: #c9c3bd;
+  padding: 12px 8px 0 0;
+  min-height: 28px;
+}
+footer .footerLinks ul li {
+  float: left;
+  font-weight: bold;
+  font-size: 0.88em;
+}
+footer .collegePortrait {
+  padding: 0 0 0 30px;
+}
+footer [role="contentinfo"] {
+  text-align: right;
+  color: @grayLighter;
+  padding: 6px 8px 0 0;
+}
+footer [role="contentinfo"] a {
+	color: @grayLighter;
+}
+footer [role="contentinfo"] a:hover {
+	color: @linkColor;
+}
+
+/***************
+	SOCIAL MEDIA ICONS
+	************/
+.icon-facebook {
+  background: url('/global/images/150/socialMedia/icon-facebook.png') no-repeat;
+  min-width: 40px;
+  min-height: 41px;
+}
+.icon-twitter {
+  background: url('/global/images/150/socialMedia/icon-twitter.png') no-repeat;
+  min-width: 40px;
+  min-height: 41px;
+}
+.icon-youtube {
+  background: url('/global/images/150/socialMedia/icon-youtube.png') no-repeat;
+  min-width: 40px;
+  min-height: 41px;
+}
+.icon-flickr {
+  background: url('/global/images/150/socialMedia/icon-flickr.png') no-repeat;
+  min-width: 40px;
+  min-height: 41px;
+}
+
+/***************
+	ALERTS
+	************/
+#alertMessage {
+	margin: 0 0 22px 0;
+	text-align: center;
+	position: relative;
+	bottom: 12px;
+	background-color: #9B301C;
+	color: #fff;
+}
+#alertMessage h1 {
+	text-transform: uppercase;
+}
+
+/************************* END OF TEMPLATE STYLES **************************/
+
+/***************
+	HOMEPAGE
+	************/
+
+/***** Slider *****/
+#topContainer .slider-wrapper {
+	padding: 0 0 20px;
+}
+
+/***** Middle Container *****/
+.middleContainer1, .middleContainer2, .middleContainer3 {
+	background-color: #edebe9;
+	height: 65px;
+}
+.middleContainer img {
+	float: left;
+	padding: 12px;
+	padding-right: 6px;
+}
+.middleContainer h1 {
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 22px;
+	position: relative;
+	bottom: 8px;
+	padding: 12px;
+}
+.middleContainer p {
+	text-transform: uppercase;
+	font-size: 12px;
+	padding: 0 0 0 36px;
+	position: relative;
+	bottom: 20px;
+}
+.middleContainer p .border {
+	border-right: 2px solid @gold;
+	margin: 0 5px 0 2px;
+}
+
+.separator {
+	margin: 12px 0 0 0;
+}
+
+/***** Bottom Container *****/
+.bottomContainer1, .bottomContainer2, .bottomContainer3 {
+	padding: 12px;
+	background-color: #edebe9;
+	height: 210px;
+	margin-bottom: 10px;
+}
+.bottomContainer img {
+	float: left;
+	padding-right: 6px;
+}
+.bottomContainer h2 {
+	font-weight: normal;
+	font-size: 22px;
+	position: relative;
+	bottom: 10px;
+}
+.profiles p {
+	margin: 0;
+}
+.profiles .alumniName {
+	font-weight: bolder;
+	font-size: 14px;
+}
+.profiles .profileType {
+	text-transform: capitalize;
+	font-style: italic;
+	font-size: 13px;
+	padding-bottom: 8px;
+}
+.profiles .articleTitle {
+	padding-bottom: 8px;
+	font-size: 13px;
+}
+.profiles .linkCapArrows {
+	font-size: 11px;
+	color: @linkColor;
+  text-transform: uppercase;
+}
+
+.news p {
+	font-size: 12px;
+}
+
+/************************* END OF HOMEPAGE STYLES **************************/
+
+/* ------------------------------ */
+/* Top Level Content Styles       */
+/* ------------------------------ */
+#topLevelAboutContainer {
+	float:left;
+	position:relative;
+	background:#000;
+}
+#topLevelAbout {
+	float:left;
+	position:relative;
+	height:286px;
+	margin:4px 0 4px 4px;
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	color:@white;
+	background:#000;
+}
+#topLevelTopPhoto .border-overlay {
+	border-left:none;
+	margin-left:0;
+}
+#topLevelAbout h1 {
+	padding: 12px 0 0 16px;
+	color: #CCC;
+}
+#topLevelAbout p {
+	margin:4px 0 10px 0;
+	padding:0 15px;
+	line-height:22px;
+}
+#topLevelAbout a {
+	color: @linkColor;
+}
+#topLevelAbout a:hover {
+	color: @linkColorHover;
+}
+/*used on the top level about us page under locations*/
+ul.linkLists {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+ul.linkLists li {
+	float: left;
+	list-style-type: none;
+	margin: 0 25px 0 0;
+	padding: 0;
+	text-align: left;
+}
+
+#topLevelTopPhoto {
+	float:right;
+	position:relative;
+}
+#topLevelMainBodyPhotos {
+	float:left;
+	position:relative;
+	margin:10px 0 10px 0;
+}
+#topLevelMainBodyPhotoLeft {
+	float:left;
+	position:relative;
+}
+#topLevelMainBodyPhotoRight {
+	float:right;
+	position:relative;
+}
+#topLevelMainBodyContentLeft {
+	float:left;
+	position:relative;
+	min-height:100px;
+	padding:0 15px;
+	font-size:12px;
+}
+#topLevelMainBodyContentLeft p {
+	margin:5px 0 10px 0;
+}
+#topLevelMainBodyContentRight {
+	float:right;
+	position:relative;
+	min-height:100px;
+	padding:0 15px;
+	font-size:12px;
+}
+#topLevelMainBodyContentRight p {
+	margin:5px 0 10px 0;
+}
+#topLevelMainBodyContentBottomLeftTop {
+	float:left;
+	min-height:310px;
+	margin:0 0 0 10px;
+	padding:3px 0;
+}
+#topLevelMainBodyContentBottomLeftTop img {
+	float:left;
+	margin: 0 5px 0 0;
+}
+#topLevelMainBodyContentBottomLeftTopImage1 {
+	float:left;
+	width:547px;
+	min-height:150px;
+}
+#topLevelMainBodyContentBottomLeftTopImage2 {
+	float:left;
+	width:547px;
+	min-height:150px;
+}
+.topLevelImage {
+	float:left;
+	width:222px;
+	margin:0 10px 0 0;
+	min-height:150px;
+}
+.topLevelText {
+	float:left;
+	width:315px;
+	min-height:150px;
+	margin:5px 0 0 0;
+	font-size:12px;
+}
+.topLevelText p {
+	margin:0 0 10px 0;
+}
+/* Increasing the width of Certificates and Licensure Programs Drop-down */
+form#certlic-form select#cert-lic-programs.cert-lic-programs {
+	width: 270px;
+}
+#topLevelMainBodyContentBottomLeftBottom {
+	float:left;
+	width:547px;
+	min-height:15px;
+	margin:14px 0 0 10px;
+}
+.topLevelAdditionalText {
+	float:left;
+	position:relative;
+	width:166px;
+	min-height:15px;
+	height:15px;
+	font-size:12px;
+	padding:0 16px 0 0;
+	margin:10px 0 0 0;
+}
+.topLevelAdditionalHeading {
+	font-size:12px;
+	font-weight:bold;
+	color:#666666;
+	height: 38px;
+}
+.topLevelAdditionalParagraph {
+	height: 140px;
+}
+.topLevelAdditionalTextAbout .topLevelAdditionalParagraph {
+	height: 190px;
+}
+
+#topLevelMainBodyContentBottomRightContainer {
+	float:right;
+	position:relative;
+	width:325px;
+	min-height:500px;
+	height:auto !important;
+	height:500px;
+	margin:0 10px 10px 0;
+	background:#e5e5e5;
+}
+#topLevelMainBodyContentBottomRight {
+	float:left;
+	min-height:488px;
+	height:auto !important;
+	height:488px;
+	margin:5px;
+	border:1px solid #fff;
+	background:#e5e5e5;
+}
+.fastFactsImg {
+	float:left;
+	position:relative;
+	width:313px;
+	height:44px;
+}
+.fastFactsText {
+	float:left;
+	width:283px;
+	font-size:12px;
+	padding:0 15px 0 15px;
+}
+.fastFactsText strong {
+	font-size:16px;
+	font-weight:bold;
+}
+.fastFactsText ul {
+	margin:30px 0 30px 20px;
+	list-style-type:none;
+	font-size:14px;
+	font-weight:bold;
+}
+.fastFactsText ul a {
+	text-decoration: none;
+}
+.fastFactsText li {
+	background:url(/global/images/150/breadCrumbs.png) no-repeat 0 3px;
+	padding:0 0 0 20px;
+	margin: 0 0 10px 0;
+}
+.fastFactsText a.linkCapArrows {
+	background:url("/global/images/fastFactsArrows.jpg") no-repeat 100% 1px;
+}
+.factNumber {
+	position:absolute;
+	top:0;
+	right:0;
+	font-size:114px;
+	color:#d3aeae;
+}
+ul.facts-alternative {
+  margin-top: 0;
+}
+ul.facts-alternative li {
+  margin-top: -0.2em;
+}
+.linkCapArrows {
+	background: url("/global/images/150/linkArrows.gif") no-repeat scroll 100% 2px transparent;
+	clear: right;
+	color: @linkColor;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 0 15px 0 0;
+	text-decoration: none;
+	text-transform: uppercase;
+} 
+.linkCapArrows:hover {
+	background: url("/global/images/150/linkArrows.gif") no-repeat scroll 100% 2px transparent;
+	text-decoration: underline;
+	color: #005580;
+}
+
+.contentSeparator {
+	float:left;
+	width:100%;
+	min-height:2px;
+	margin-bottom: 10px;
+	border-top:2px solid #999;
+}
+
+/***** Prospective Students *****/
+#prospectivetopLevelPhoto {
+	padding-bottom: 8px;
+}
+.prospectiveHeading h2 {
+	line-height: 1;
+	height: 58px;
+}
+.prospectiveHeading h2 a {
+	color: @linkColor;
+}
+.prospectiveHeading h2 a:hover {
+	color: @linkColorHover;
+}
+.prospectiveText {
+	height: 320px;
+	font-size: 13px;
+	padding: 4px;
+}
+.prospectiveLinks {
+	height: 90px;
+}
+.prospectiveAdditionalLinks {
+	padding-bottom: 8px;
+}
+.prospectiveAdditionalLinks li a {
+	color: @linkColor;
+}
+.prospectiveAdditionalLinks li a:hover {
+	color: @linkColorHover;
+}
+.prospectiveBottom1 {
+	padding-bottom: 12px;
+}
+
+/***** Acdemics Details *****/
+#leftProgramAreaContainer {
+	float:left;
+	width:260px;
+	font-size:11px;
+	color:#000;
+	margin:5px 0 0 0;
+}
+#leftProgramAreaContainer a.linkCapArrows {
+	background:url("/global/images/150/linkArrows.gif") no-repeat 100% 1px;
+}
+#leftProgramAreaContainer .imgHolder {
+	float:left;
+	margin:0 5px 0 0;
+	width:109px;
+}
+#programAreaTopContainer {
+	float:left;
+	width:260px;
+	margin:0 0 5px 0;
+	background:#ccc;
+}
+#programAreaTop {
+	float:left;
+	width:240px;
+	margin:4px;
+	padding:0 10px 0 0;
+	border:1px solid #fff;
+}
+#programAreaTopText {
+	float:left;
+	width:120px;
+}
+#programAreaMiddleContainer {
+	float:left;
+	width:260px;
+	margin:0 0 5px 0;
+	background:#ccc;
+}
+#programAreaMiddle {
+	float:left;
+	width:240px;
+	margin:4px;
+	padding:0 10px 0 0;
+	border:1px solid #fff;
+}
+#programAreaMiddleText {
+	float:left;
+	width:120px;
+}
+#programAreaBottomContainer {
+	float:left;
+	width:260px;
+	margin:0 0 5px 0;
+	background:#ccc;
+}
+#programAreaBottom {
+	float:left;
+	width:240px;
+	margin:4px;
+	padding:0 10px 0 0;
+	border:1px solid #fff;
+}
+#programAreaBottomText {
+	float:left;
+	width:120px;
+}
+#programMainContainer {
+	float:right;
+	width:652px;
+	margin:5px 0 0 0;
+}
+#programMainImage {
+	float:left;
+	position:relative;
+	width:652px;
+	min-height:223px;
+	height:auto !important;
+	height:223px;
+	margin:0 0 5px 0;
+	padding:0;
+}
+#programMainImageSeparatorContainer {
+	float:left;
+	position:relative;
+	width:652px;
+	height:14px;
+	margin:0 0 5px 0;
+	padding:0;
+	background:@gold;
+}
+
+div#programMainImageSeparator {
+	float:left;
+	position:relative;
+	width:647px;
+	height:14px;
+	margin:0;
+	padding:0;
+}
+#programMainContent {
+	float:left;
+	position:relative;
+	width:632px;
+	min-height:131px;
+	height:auto !important;
+	height:131px;
+	font-size:12px;
+	color:#000;
+	margin:10px 0 5px 0;
+	padding:0 10px;
+}
+#contentSeparatorContainer {
+	float:left;
+	position:relative;
+	width:898px;
+	margin:10px 0 5px 0;
+	padding:0 10px;
+}
+#BottomProgramAreaContainer {
+	float:left;
+	position:relative;
+	width:896px;
+	min-height:10px;
+	height:auto !important;
+	height:10px;
+	margin:10px 0 0 0;
+	padding:0 11px;
+}
+
+#programAreaLeft {
+	float:left;
+	position:relative;
+	width:229px;
+	min-height:300px;
+	height:auto !important;
+	height:300px;
+	font-family:Arial, sans-serif;
+	font-size:12px;
+	color:#000;
+	margin:0;
+	padding:5px 10px;
+	border-right:1px solid #ccc;
+}
+#programAreaLeft ul {
+	margin-left:0;
+	padding-left:18px;
+}
+#programAreaLeft li {
+	margin:6px 0 0 0;
+}
+.appIcon {
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:100px;
+	float:left;
+	font-size:11px;
+}
+.appIcon a {
+	display:block;
+	background:url(/global/images/icon-application.jpg);
+	background-repeat:no-repeat;
+	height:50px;
+	padding:10px 0 0 50px;   
+	text-decoration:none;
+	color:#000;
+}
+.appIcon a:hover {
+  text-decoration:underline;
+}
+#programAreaCenter {
+	float:left;
+	position:relative;
+	width:366px;
+	min-height:310px;
+	height:auto !important;
+	height:310px;
+	margin:0 14px 0 21px;
+	padding:0;
+}
+#programAreaCenter p {
+	margin:0;
+	padding:0 0 5px 0;
+}
+#programAreaCenter img {
+	float:left;
+	margin:0 10px 0 0;
+}
+#programAreaCenterTop {
+	float:left;
+	position:relative;
+	width:366px;
+	min-height:150px;
+	height:auto !important;
+	height:150px;
+	font-family:Arial, sans-serif;
+	font-size:12px;
+	color:#000;
+	margin:0;
+	padding:0;
+}
+#programAreaCenterBottom {
+	float:left;
+	position:relative;
+	width:366px;
+	min-height:150px;
+	height:auto !important;
+	height:150px;
+	font-family:Arial, sans-serif;
+	font-size:12px;
+	color:#000;
+	margin:5px 0 0 0;
+	padding:0;
+}
+#programAreaRightContainer {
+	float:left;
+	position:relative;
+	width:245px;
+	min-height:310px;
+	height:auto !important;
+	height:310px;
+	margin:0;
+	padding:0;
+	background:#e5e5e5;
+}
+#programAreaRight {
+	float:left;
+	position:relative;
+	width:223px;
+	min-height:290px;
+	height:auto !important;
+	height:310px;
+	font-family:Arial, sans-serif;
+	font-size:10px;
+	color:#000;
+	margin:3px 4px;
+	padding:12px 6px 0 6px;
+	border:1px solid #bfbfbf;
+}
+
+/*  Class to make photos have a border  */
+img.imageBorder {
+	border:1px solid #CCC; 
+	padding:4px;
+}
+.border-overlay {
+	border:1px solid #ccc;
+	margin:4px;
+}
+
+/***************
+	SITEMAP
+	************/
+#siteMap .alphabets .inner {
+	display: inline-block;
+}
+#siteMap .alphabets li {
+	float: left;
+	margin: 0 9px 0 9px;
+	list-style: square;
+	font-size: 12px;
+}
+#siteMap .directoryHeader {
+  margin-bottom:-20px;
+}
+#siteMap .directoryEmpty {
+  font-style:italic;
+  color:#999;
+}
+#siteMap ul.jTree {
+  margin-top:0;
+  padding-left:60px;
+}
+#siteMap .jTree li {
+	list-style: none;
+}
+#siteMap .jTree li.returnToTop a {
+	color: #999;
+	font-style: italic;
+}
+
+/***************
+	FORMS
+	************/
+#messagesMessages, #errorMessages {
+	background-color: @errorBackground;
+	color: @errorText;
+	border: @errorBorder;
+}
+
+@import "lightbox.less";
